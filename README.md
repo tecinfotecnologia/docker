@@ -1,2 +1,1 @@
-# docker
-# docker
+Docker com nginx, php e mysql
