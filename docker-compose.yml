@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 version: '3'
+=======
+version: '3.8'
+>>>>>>> 56ca178f2bef230574c5f942cf2b67c29b17fbd5
 
 services:
   nginx:
@@ -51,4 +55,8 @@ networks:
   rede:
 
 volumes:
+<<<<<<< HEAD
   db_data:
+=======
+  db_data:
+>>>>>>> 56ca178f2bef230574c5f942cf2b67c29b17fbd5

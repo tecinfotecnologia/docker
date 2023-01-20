@@ -17,6 +17,7 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
 
 # Instalar a ultima versão do composer
+<<<<<<< HEAD
 #RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # Instala o instalador do Framework Laravel
@@ -28,6 +29,19 @@ RUN docker-php-ext-install pdo_mysql mbstring exif pcntl bcmath gd
 
 # Correção bug laravel
 #RUN export PATH="~/.composer/vendor/bin:$PATH" 
+=======
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+# Instala o instalador do Framework Laravel
+RUN composer global require laravel/installer
+
+# Instala o instalador do Framework symfony 
+RUN curl -sS https://get.symfony.com/cli/installer  | bash
+RUN cp /root/.symfony/bin/symfony /usr/local/bin
+
+# Correção bug laravel
+RUN export PATH="~/.composer/vendor/bin:$PATH" 
+>>>>>>> 56ca178f2bef230574c5f942cf2b67c29b17fbd5
 
 WORKDIR /var/www
 
